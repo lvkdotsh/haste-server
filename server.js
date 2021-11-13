@@ -2,7 +2,7 @@ const winston = require('winston');
 const fs = require('fs');
 const st = require('st');
 const app = require('express')();
-const expressRateLimit = require('express-rate-limit');
+// const expressRateLimit = require('express-rate-limit');
 
 const DocumentHandler = require('./lib/document_handler');
 const HasteUtils = require('./lib/util');
@@ -73,7 +73,7 @@ const utils = new HasteUtils();
 	});
 
 	//rate limit all requests
-	if (config.rateLimits) app.use(expressRateLimit(config.rateLimits));
+	// if (config.rateLimits) app.use(expressRateLimit(config.rateLimits));
 
 	//try API first
 
